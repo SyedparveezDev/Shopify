@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f6f7" />
+  <title>Commerce Admin — Analytics Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">S</span><span>Commerce Admin</span><button class="collapse" title="Toggle menu" id="collapse">☷</button></div>
+      <div class="sidebar-search">⌕ <span>Search</span><kbd>⌘K</kbd></div>
+      <nav id="nav" aria-label="Main navigation">
+        <button data-page="Home">⌂ <span>Home</span></button>
+        <button data-page="Orders">▣ <span>Orders</span></button>
+        <button data-page="Customers">♙ <span>Customers</span></button>
+        <button data-page="Discounts">✧ <span>Discounts</span></button>
+        <button data-page="Content">▧ <span>Content</span></button>
+        <button data-page="Markets">◉ <span>Markets</span></button>
+        <button class="active" data-page="Analytics">▥ <span>Analytics</span></button>
+        <button class="subnav" data-page="Reports"><span>Reports</span></button>
+        <p class="nav-label">SALES CHANNELS</p>
+        <button data-page="Online store">▤ <span>Online store</span></button>
+        <button data-page="Products">◫ <span>Products</span></button>
+      </nav>
+      <div class="sidebar-bottom"><button data-page="Settings">⚙ <span>Settings</span></button><div class="shop-account"><span class="avatar">CT</span><span>My shop <small>Demo store</small></span></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="topbar-left"><span class="analytics-icon">▥</span><strong id="pageTitle">Analytics</strong><span class="refresh">Last refreshed: <span id="refreshTime">18:22</span></span></div><div class="top-actions"><span class="demo-pill">DEMO DATA · NOT LIVE SALES</span><button class="icon-btn" id="refreshBtn" title="Refresh dashboard">↻</button><button class="outline-btn" id="exportBtn">Export CSV ↓</button></div></header>
+      <div class="content">
+        <div class="notice"><span>ⓘ</span><div><strong>Demo analytics dashboard</strong><p>Figures are recreated from your reference screenshot. They are sample values, not verified Shopify transactions or live customer activity.</p></div><button id="dismissNotice" title="Dismiss notice">×</button></div>
+        <section id="analyticsView">
+          <div class="filter-row"><div class="date-control"><label for="period">◷</label><select id="period" aria-label="Date range"><option>Today</option><option>Yesterday</option><option>Last 7 days</option><option>Last 30 days</option></select></div><span class="date-tag" id="dateTag">October 25, 2026</span><span class="date-tag">₹ INR</span><div class="filter-spacer"></div><span class="live-status"><span class="green-dot"></span><strong>194</strong> online visitors <small>(sample)</small></span></div>
+          <div class="headline-row"><div><div class="eyebrow">Total sales</div><div class="hero-amount">₹668.48K <span>↗ 0.6%</span></div></div><button class="outline-btn" id="reportBtn">▤ View report</button></div>
+          <div class="summary-grid"><article class="metric"><div>Sessions</div><strong>19.2K</strong><small class="down">↘ 3%</small></article><article class="metric accent"><div>Total sales</div><strong>₹668.48K</strong><small class="up">↗ 0.6%</small></article><article class="metric"><div>Total orders</div><strong>776</strong><small class="up">↗ 5%</small></article><article class="metric"><div>Conversion rate</div><strong>0.04%</strong><small class="down">↘ 82%</small></article></div>
+          <div class="chart-layout"><article class="panel chart-panel"><div class="panel-head"><div><h2>Total sales over time</h2><p>Compared with previous period</p></div><span class="chart-total">₹668,480</span></div><div class="chart-wrap"><svg id="salesChart" viewBox="0 0 920 300" preserveAspectRatio="none" role="img" aria-label="Line chart comparing reference sales trends"><defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#35a6ca" stop-opacity=".2"/><stop offset="100%" stop-color="#35a6ca" stop-opacity="0"/></linearGradient></defs><g class="gridlines"><line x1="78" x2="904" y1="35" y2="35"/><line x1="78" x2="904" y1="133" y2="133"/><line x1="78" x2="904" y1="231" y2="231"/></g><g class="y-labels"><text x="14" y="40">₹100K</text><text x="23" y="138">₹50K</text><text x="48" y="237">₹0</text></g><path id="prevLine" class="previous-path"/><path id="areaLine" fill="url(#areaFill)"/><path id="currentLine" class="current-path"/><g class="x-labels"><text x="78" y="280">12:00 AM</text><text x="382" y="280">10:00 AM</text><text x="690" y="280">8:00 PM</text></g></svg></div><div class="legend"><span><b class="blue-dot"></b>Current period</span><span><b class="pale-dot"></b>Previous period</span></div></article><article class="panel breakdown"><h2>Total revenue breakdown</h2><div id="breakdown"></div></article></div>
+          <div class="lower-grid"><article class="panel"><h2>Total sales by sales channel</h2><div class="channel-row"><span>Online Store</span><strong>₹668.48K</strong></div><div class="progress"><span></span></div><small>100% of sample sales</small></article><article class="panel"><h2>Average order value</h2><div class="panel-big">₹861.44</div><p class="muted">Calculated from ₹668,480 ÷ 776 orders</p></article><article class="panel"><h2>Total sales by product</h2><div id="productSummary"></div><button class="link-btn" data-page="Products">Manage products →</button></article></div>
+        </section>
+        <section id="genericView" hidden><div class="section-top"><div><h1 id="genericTitle"></h1><p class="muted" id="genericDesc"></p></div><button id="addProduct" class="primary-btn" hidden>+ Add product</button></div><div id="genericBody"></div></section>
+        <footer>Commerce Admin · Shopify-inspired independent demo · No Shopify affiliation · All metrics are sample data</footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="productDialog"><form method="dialog" id="productForm"><h2>Add product</h2><p class="muted">Create a product to display in this demo. Saved in this browser only.</p><label>Product title<input name="name" required maxlength="100" placeholder="Example: Premium Cotton T-shirt"></label><label>Price (₹)<input name="price" required type="number" min="0" step="0.01" placeholder="999"></label><label>Inventory<input name="inventory" required type="number" min="0" step="1" value="10"></label><div class="dialog-actions"><button type="button" id="cancelProduct" class="outline-btn">Cancel</button><button type="submit" class="primary-btn">Save product</button></div></form></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
