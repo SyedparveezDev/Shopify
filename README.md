@@ -1,4 +1,4 @@
-# Commerce Admin — Shopify-inspired analytics demo
+# Commerce Admin — Shopify-inspired analytics
 
 A standalone, responsive dashboard inspired by the supplied Shopify admin screenshot. The reference numbers are **sample/demo data**, not real sales, visitors, orders, or customer records. This project is not affiliated with Shopify.
 
