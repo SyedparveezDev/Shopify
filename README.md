@@ -31,3 +31,4 @@ Then visit `http://localhost:8080`.
 - Product details were not provided in the two screenshots, so the product catalog starts empty.
 - For production, connect authenticated APIs, a database, actual orders, and analytics events.
 # shopify
+# Shopify
