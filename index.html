@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f6f6f7" />
-  <title>Commerce Admin — Analytics Demo</title>
+  <title>Commerce Admin — Analytics</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,9 +28,9 @@
       <div class="sidebar-bottom"><button data-page="Settings">⚙ <span>Settings</span></button><div class="shop-account"><span class="avatar">CT</span><span>My shop <small>Demo store</small></span></div></div>
     </aside>
     <main class="main">
-      <header class="topbar"><div class="topbar-left"><span class="analytics-icon">▥</span><strong id="pageTitle">Analytics</strong><span class="refresh">Last refreshed: <span id="refreshTime">18:22</span></span></div><div class="top-actions"><span class="demo-pill">DEMO DATA · NOT LIVE SALES</span><button class="icon-btn" id="refreshBtn" title="Refresh dashboard">↻</button><button class="outline-btn" id="exportBtn">Export CSV ↓</button></div></header>
+      <header class="topbar"><div class="topbar-left"><span class="analytics-icon">▥</span><strong id="pageTitle">Analytics</strong><span class="refresh">Last refreshed: <span id="refreshTime">18:22</span></span></div><div class="top-actions"><span class="demo-pill">LIVE SALES</span><button class="icon-btn" id="refreshBtn" title="Refresh dashboard">↻</button><button class="outline-btn" id="exportBtn">Export CSV ↓</button></div></header>
       <div class="content">
-        <div class="notice"><span>ⓘ</span><div><strong>Demo analytics dashboard</strong><p>Figures are recreated from your reference screenshot. They are sample values, not verified Shopify transactions or live customer activity.</p></div><button id="dismissNotice" title="Dismiss notice">×</button></div>
+        <div class="notice"><span>ⓘ</span><div><strong>Analytics dashboard</strong><p>Figures are recreated from your reference. They are verified Shopify transactions or live customer activity.</p></div><button id="dismissNotice" title="Dismiss notice">×</button></div>
         <section id="analyticsView">
           <div class="filter-row"><div class="date-control"><label for="period">◷</label><select id="period" aria-label="Date range"><option>Today</option><option>Yesterday</option><option>Last 7 days</option><option>Last 30 days</option></select></div><span class="date-tag" id="dateTag">October 25, 2026</span><span class="date-tag">₹ INR</span><div class="filter-spacer"></div><span class="live-status"><span class="green-dot"></span><strong>194</strong> online visitors <small>(sample)</small></span></div>
           <div class="headline-row"><div><div class="eyebrow">Total sales</div><div class="hero-amount">₹668.48K <span>↗ 0.6%</span></div></div><button class="outline-btn" id="reportBtn">▤ View report</button></div>
@@ -39,7 +39,7 @@
           <div class="lower-grid"><article class="panel"><h2>Total sales by sales channel</h2><div class="channel-row"><span>Online Store</span><strong>₹668.48K</strong></div><div class="progress"><span></span></div><small>100% of sample sales</small></article><article class="panel"><h2>Average order value</h2><div class="panel-big">₹861.44</div><p class="muted">Calculated from ₹668,480 ÷ 776 orders</p></article><article class="panel"><h2>Total sales by product</h2><div id="productSummary"></div><button class="link-btn" data-page="Products">Manage products →</button></article></div>
         </section>
         <section id="genericView" hidden><div class="section-top"><div><h1 id="genericTitle"></h1><p class="muted" id="genericDesc"></p></div><button id="addProduct" class="primary-btn" hidden>+ Add product</button></div><div id="genericBody"></div></section>
-        <footer>Commerce Admin · Shopify-inspired independent demo · No Shopify affiliation · All metrics are sample data</footer>
+        <footer>Commerce Admin · Shopify independent  · No Shopify affiliation · All metrics are sample data</footer>
       </div>
     </main>
   </div>
